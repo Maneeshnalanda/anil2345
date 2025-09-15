@@ -27,3 +27,13 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/dev'
     environmentServiceNameAzureRM: 'maneeshNew connection sep25'
+
+
+- task: TerraformTask@5
+  displayName: terraform apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/dev'
+    environmentServiceNameAzureRM: 'maneeshNew connection sep25'
+
