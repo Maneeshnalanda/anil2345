@@ -8,3 +8,14 @@ steps:
   displayName: "Terraform Install"
   inputs:
     terraformVersion: 'latest'
+- task: TerraformTask@5
+  displayName: terraform init
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/dev'
+    backendServiceArm: 'maneeshNew connection sep25'
+    backendAzureRmResourceGroupName: 'rg_maneesh123'
+    backendAzureRmStorageAccountName: 'stgmaneesh22222'
+    backendAzureRmContainerName: 'maneeshcontainer123'
+    backendAzureRmKey: 'prod.tfstate'
