@@ -1,0 +1,10 @@
+trigger: none
+
+pool:
+  name: maneesh3456
+
+steps:
+- task: TerraformInstaller@1
+  displayName: "Terraform Install"
+  inputs:
+    terraformVersion: 'latest'
